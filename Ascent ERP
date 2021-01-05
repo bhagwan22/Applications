@@ -1,0 +1,46 @@
+OBJECT
+-------
+# 
+Sales Planner
+Purchase Planner
+Master planner  --> order based on customer demand if we are having less no. in our storage then demand
+
+# Purchase orders --> to order form suppliers
+
+# Production work order --> Bundle product
+
+# Pick, Pack, Ship & Invoice
+
+# Item Master
+- Item(Products) 
+	* each item must be connect to a Item group
+	* Item type : single or a bundle(BOM-build with material)
+	* Unit of Measure : (object) use to define which unit of measure we use for PO & SO
+	* Lead time : no. of date to fulfill
+	* Inventory section -> hase detail about item in (hand, (ATP)available to promise to the customer, PO,no of item in SO) + parameter based on which a purchase order is initiated to order more form the suppliers
+	* RELATEDLIST
+		= Trade Aggrement(for discount/special price base condition, person, time)
+		= Unit of Measure
+		= Purchase order Line
+		= Received Purchase order Line
+		= Item Location
+		= Return Line
+
+# Purchase Order
+	- create record ->(view order) email details to Suppliers--> once received delivery -> receive PO(Button) --> check item received --> it will create a "receive PO line"(detail Locatin it stored, quantity, UOM)
+
+
+# MovementLines -> transaction/movement of item form one location to another, is move in lot?
+
+# Address tracker
+
+# Sales order
+# Sales Order Line
+
+
+
+SO can be created from Quote, Opportunity or web order
+
+When to link SO to PO?
+
+
